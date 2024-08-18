@@ -11,7 +11,7 @@ html,body{
 	position: relative;
 }
 
-body > .wrap_grid{
+body{
 	background: #fefefe;
 	min-height: 100vh;
 	display: grid;

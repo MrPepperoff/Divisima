@@ -1,0 +1,132 @@
+@import 'mixin.scss'
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap')
+html
+    font-size: 10px
+:root
+    --bg: 255,255,255
+    --text: 0,0,0
+    --d-gray: 40,40,40
+    --pink: 245,17,103
+    --josefin-sans: 'Josefin Sans', sans-serif
+
+
+.header
+    &__top
+        background: rgb(var(--bg))
+        height: 76px
+        &-wrap
+            display: flex
+            height: 100%
+            align-items: center
+            justify-content: space-between
+            & i
+                font-size: 2.2rem
+
+    &__logo 
+        padding: 0 20px
+    &__search
+        flex-grow: 4
+        &-wrap
+            position: relative
+            margin: 0 20px
+            & input 
+                width: 100%
+                height: 44px
+                border-radius: 20px
+                border: none
+                background: #f0f0f0
+                padding-left: 10px
+                box-sizing: border-box
+                &::placeholder
+                    color: rgba(var(--d-gray), .5)
+                    font-family: var(--josefin-sans)
+                    font-weight: 600
+
+            & button
+                position: absolute
+                top: 0 
+                right: 5px
+                height: 100%
+                border: 0px
+                background: transparent
+                & i
+                    font-size: 2rem    
+    &__user-panel
+        display: flex
+        font-size: 1.4rem
+        align-items: center
+        justify-content: space-around
+        flex-grow: 1
+        font-family: var(--josefin-sans)
+        & a
+            font-family: var(--josefin-sans)
+            color: rgb(var(--text))
+            text-decoration: none
+    &__cart
+        &-icon
+            display: inline-block
+            position: relative
+            & span
+                position: absolute
+                font-size: 1rem
+                top: -0.2rem
+                right: -0.2rem
+                background: rgb(var(--pink))
+                color: rgb(var(--bg))
+                width: 1.5rem
+                height: 1.5rem
+                box-sizing: border-box
+                line-height: 1.5rem
+                padding: 0.2rem 0.2rem 0.1rem
+                text-align: center
+                border-radius: 50%
+    &__bottom
+        background: rgb(var(--d-gray))    
+        color: rgb(var(--bg))
+        height: 50px
+.nav
+    height: 100%
+    &__wrap
+        height: 100%
+    & a
+        text-decoration: none
+        color: rgb(var(--bg))
+    &__burger
+        @include xxl
+            display: none
+    &__menu
+        background: rgba(var(--bg), .2)
+        height: 100%
+        display: flex
+        align-items: center
+        font-family: var(--josefin-sans)
+        & li
+            position: relative
+            font-size: 1.6rem
+            margin: 0 2.5%
+            background: #a00
+            & .promo
+                position: absolute
+                top: -8px
+                font-weight: bold
+                font-size: 1rem
+                padding: 5px
+                height: 16px
+                box-sizing: border-box
+                text-transform: uppercase
+                display: inline-block
+                border-radius: 10px
+                text-align: center
+                background: rgb(var(--pink))
+                left: 1px
+                right: 1px
+            &:first-child
+                padding: 0 0px 0 15px
+
+        &-sub
+            display: none
+.container
+    margin: 0 auto
+
+    @include xxl
+        width: 1199px
