@@ -354,7 +354,6 @@ html {
   position: relative;
 }
 .carousel__context {
-  margin: 0;
   position: absolute;
   left: 12% !important;
   right: 12% !important;
@@ -365,9 +364,12 @@ html {
   padding-bottom: 80px !important;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .carousel__text {
-  width: 49%;
+  width: 587px;
+  padding: 0 15px;
+  box-sizing: border-box;
   text-align: left;
 }
 .carousel__text span {
@@ -378,6 +380,8 @@ html {
   margin-bottom: 15px;
   display: block;
   position: relative;
+  opacity: 0;
+  animation: 1s ease textCarusel forwards;
 }
 .carousel__text h2 {
   font-size: 6rem;
@@ -385,6 +389,8 @@ html {
   font-weight: 700;
   margin-bottom: 17px;
   position: relative;
+  opacity: 0;
+  animation: 1s 0.3s ease textCarusel forwards;
 }
 .carousel__text p {
   font-size: 1.8rem;
@@ -392,6 +398,8 @@ html {
   margin-bottom: 35px;
   position: relative;
   line-height: 1.6;
+  opacity: 0;
+  animation: 1s 0.6s ease textCarusel forwards;
 }
 .carousel__text a {
   display: inline-block;
@@ -406,6 +414,8 @@ html {
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+  opacity: 0;
+  animation: 1s 0.9s ease textCarusel forwards;
 }
 .carousel__link {
   background: rgb(var(--bg));
@@ -426,16 +436,117 @@ html {
   width: 160px;
   position: relative;
   border-radius: 50%;
+  opacity: 0;
+  animation: 0.5s 1s ease offer forwards;
 }
 .carousel__offer-radius {
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid rgba(var(--bg), 0.5);
   position: absolute;
-  inset: 10px;
+  padding: 10px;
+  inset: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .carousel__offer-radius span {
   font-size: 2rem;
 }
 .carousel__offer-radius h2 {
   font-size: 7.2rem;
+}
+.carousel__offer-radius p {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.carousel__control {
+  height: 0px !important;
+  position: relative !important;
+  border: 2px solid rgba(var(--bg), 0.6) !important;
+  background: transparent !important;
+  border-radius: 50%;
+  height: 20px !important;
+  width: 20px !important;
+  text-indent: 0 !important;
+}
+.carousel__control i {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.carousel__control:hover {
+  color: rgba(var(--bg), 0.9);
+}
+.carousel__indicators {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  width: 100%;
+  display: block !important;
+}
+.carousel__indicators-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel__button {
+  display: flex;
+  align-items: center;
+}
+.carousel__indicator {
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 50%;
+}
+.carousel__number {
+  color: rgb(var(--bg));
+  font-size: 2.4rem;
+}
+.carousel__number span {
+  font-weight: bold;
+}
+
+.feature {
+  background: #a00;
+}
+.feature__list {
+  display: flex;
+  width: 100%;
+}
+.feature__list li {
+  flex-grow: 1;
+  background: #f8f8f8;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+}
+.feature__list li:nth-child(2) {
+  background: rgb(var(--pink));
+  color: rgb(var(--bg));
+}
+.feature__list li i {
+  margin-right: 10px;
+  font-size: 4rem;
+}
+
+@keyframes textCarusel {
+  0% {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+@keyframes offer {
+  0% {
+    transform: rotate(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

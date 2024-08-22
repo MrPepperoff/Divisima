@@ -113,10 +113,30 @@
 	<main>
 		<section class="hero">
 			<div class="hero__wrap">
-				<div id="carouselHero" class="carousel slide carousel-fade">
+				<div id="carouselHero" class="carousel slide carousel-fade" data-bs-ride="carousel">
 					<div class="carousel-inner">
+						<div class="carousel-indicators carousel__indicators">
+							<div class="container carousel__indicators-wrap">
+								<div class="carousel__button">
+									<button type="button" data-bs-target="#carouselHero" class="carousel-control-prev carousel__control" data-bs-slide="prev">
+										<i class="fa-solid fa-angle-left"></i>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active carousel__indicator" aria-current="true" aria-label="Slide 1"></button>
+									<button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" class="carousel__indicator" aria-label="Slide 2"></button>
+									<button type="button" data-bs-target="#carouselHero" class="carousel-control-next carousel__control" data-bs-slide="next">
+										<i class="fa-solid fa-angle-right"></i>
+										<span class="visually-hidden">Next</span>
+									</button>	
+								</div>
+								<div class="carousel__number">
+									<span>1</span> / <span>2</span>
+								</div>	
+							</div>
+							
+						</div>
 						<div class="carousel__item carousel-item bg_1 active">
-							<div class="carousel-caption carousel__context">
+							<div class="carousel-caption carousel__context container">
 								<div class="carousel__text">
 									<span>new arrivals</span>
 									<h2>denim jackets</h2>
@@ -134,53 +154,40 @@
 							</div>
 							
 						</div>
-						<div class="carousel-item bg_2">
-							<div class="carousel-caption d-none d-md-block">
-								<h5>Second slide label</h5>
-								<p>Some representative placeholder content for the second slide.</p>
-							</div>
-							<div class="text1">
-								<div>
-									<span>new arrivals</span>
+						<div class="carousel__item carousel-item bg_2">
+							<div class="carousel-caption carousel__context container">
+								<div class="carousel__text">
+									<span>new arrival</span>
 									<h2>denim jackets</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-									<a href="#">discover</a>
-									<a href="#">add to cart</a>
+									<a href="#" class="carousel__link-novisible">discover</a>
+									<a href="#" class="carousel__link">add to cart</a>
 								</div>
-							</div>
-							<div class="offer">
-								<div class="offer_radius">
-									<span>from</span>
-									<p>$29</p>
-									<span>shop now</span>
-								</div>
+								<div class="carousel__offer">
+									<div class="carousel__offer-radius">
+										<span>from</span>
+										<h2>$29</h2>
+										<p>shop now</p>
+									</div>
+								</div>	
 							</div>
 						</div>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
 			</div>
 		</section>
-		<section class="warp_premium">
-			<div class="pay">
-				<p><i class="fa-regular fa-credit-card"></i></p>
-				<p>fast secure payments</p>
-			</div>
-			<div class="premium">
-				<p><i class="fa-regular fa-star"></i></p>
-				<p>premium products</p>					
-			</div>
-			<div class="delivery">
-				<p><i class="fa-solid fa-location-arrow"></i></p>
-				<p>free & fast delivery</p>					
-			</div>
+		<section class="feature">
+			<ul class="feature__list">
+				<li class="feature__pay">
+					<p><i class="fa-regular fa-credit-card"></i> fast secure payments</p>
+				</li>
+				<li class="feature__premium">
+					<p><i class="fa-regular fa-star"></i> premium products</p>	
+				</li>
+				<li class="feature__delivery">
+					<p><i class="fa-solid fa-location-arrow"></i> free & fast delivery</p>	
+				</li>
+			</ul>
 		</section>
 		<section class="latest_products adaptive">
 			<h2>latest products</h2>

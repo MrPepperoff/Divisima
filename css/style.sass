@@ -95,7 +95,6 @@ html
         @include xxl
             display: none
     &__menu
-        // background: rgba(var(--bg), .2)
         height: 100%
         display: flex
         align-items: center
@@ -303,8 +302,6 @@ html
     &__item
         position: relative 
     &__context
-        // background: rgba(255,0,0,0.2)
-        margin: 0
         position: absolute
         left: 12% !important
         right: 12% !important
@@ -315,8 +312,11 @@ html
         padding-bottom: 80px !important
         display: flex
         align-items: center
+        justify-content: space-between
     &__text
-        width: 49%
+        width: 587px
+        padding: 0 15px
+        box-sizing: border-box
         text-align: left
         & span
             font-size: 1.8rem
@@ -326,18 +326,24 @@ html
             margin-bottom: 15px
             display: block
             position: relative
+            opacity: 0
+            animation: 1s ease textCarusel forwards
         & h2
             font-size: 6rem
             text-transform: uppercase
             font-weight: 700
             margin-bottom: 17px
             position: relative
+            opacity: 0
+            animation: 1s 0.3s ease textCarusel forwards
         & p
             font-size: 1.8rem
             font-weight: 300
             margin-bottom: 35px
             position: relative
             line-height: 1.6
+            opacity: 0
+            animation: 1s 0.6s ease textCarusel forwards
         & a
             display: inline-block
             font-size: 1.4rem
@@ -351,6 +357,8 @@ html
             text-decoration: none
             text-align: center
             font-weight: bold
+            opacity: 0
+            animation: 1s 0.9s ease textCarusel forwards
     &__link
         background: rgb(var(--bg))
         color: rgb(var(--text))
@@ -367,14 +375,94 @@ html
         height: 160px
         width: 160px
         position: relative
-        border-radius: 50% 
+        border-radius: 50%
+        opacity: 0
+        animation: 0.5s 1s ease offer forwards
         &-radius
             border-radius: 50% 
-            border: 1px solid #fff
+            border: 1px solid rgba(var(--bg), .5)
             position: absolute
-            inset: 10px
+            padding: 10px
+            inset: 5px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
             & span
                 font-size: 2rem
             & h2
                 font-size: 7.2rem
+            & p
+                text-transform: uppercase
+                font-size: 1.4rem
+                font-weight: 300
+    &__control
+        height: 0px !important
+        position: relative !important
+        border: 2px solid rgba(var(--bg), .6) !important
+        background: transparent !important
+        border-radius: 50% 
+        height: 20px !important
+        width: 20px !important
+        text-indent: 0 !important
+        & i
+            font-size: 1.6rem
+            line-height: 2rem
+        &:hover
+            color: rgba(var(--bg), .9)
+    &__indicators
+        margin-right: 0 !important
+        margin-left: 0 !important
+        width: 100%
+        display: block !important
+        &-wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+    &__button
+        display: flex
+        align-items: center
+    &__indicator
+        height: 10px !important
+        width: 10px !important
+        border-radius: 50%
+    &__number
+        color: rgb(var(--bg))
+        font-size: 2.4rem
+        & span
+            font-weight: bold
+.feature
+    background: #a00
+    
+    &__list
+        display: flex
+        width: 100%
+        & li
+            flex-grow: 1 
+            background: #f8f8f8
+            font-size: 2.4rem
+            text-transform: uppercase
+            font-weight: bold
+            text-align: center
+            padding: 15px 0
+            &:nth-child(2)
+                background: rgb(var(--pink))
+                color: rgb(var(--bg))
+            & i
+                margin-right: 10px 
+                font-size: 4rem
             
+@keyframes textCarusel 
+    0%
+        transform: translateY(120px)
+        opacity: 0
+    100%
+        transform: translate(0px)
+        opacity: 1
+
+@keyframes offer
+    0%
+        transform: rotate(30deg)
+        opacity: 0
+    100%
+        transform: rotate(0deg)
+        opacity: 1
