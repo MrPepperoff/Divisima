@@ -468,12 +468,14 @@ html
         opacity: 1
 
 .latest-products
-    background: #ccc
+    // background: #ccc
     &__title
         margin: 60px auto
 .card
     &__img
-        width: 100%
+        width: 90%
+        margin: 0 auto
+        box-sizing: border-box
         height: 405px
         overflow: hidden
         position: relative
@@ -541,10 +543,50 @@ html
     &__text
         display: flex
         font-size: 1.6rem
-        margin: 20px 0 30px
+        width: 90%
+        margin: 20px auto 30px
         align-items: center
         justify-content: space-between
     &__price
         font-size: 1.7rem
         font-weight: bold
         padding: 0 5px
+
+.latest
+    &__carousel
+        &-wrap
+            overflow: hidden
+            transition: 0.5s ease
+        &-inner
+            transition: 0.5s ease
+            overflow: visible
+    &__control-prev, 
+    &__control-next
+        color: rgb(var(--d-gray))
+        width: 4vh
+        height: 4vh
+        border-radius: 50%
+        border: 2px solid rgb(var(--d-gray))
+        top: 50%
+        transform: translateY(-50%)
+        opacity: 0.6
+        transition: 0.2s ease
+        &:hover
+            color: rgb(var(--d-gray))
+            opacity: 1
+            background: rgba(var(--d-gray), .08)
+        &:focus
+            color: rgb(var(--d-gray))
+    &__control-next
+        right: -4vh
+    &__control-prev
+        left: -4vh
+
+@media (min-width: 768px) 
+.latest
+    &__carousel-inner
+        display: flex
+    &__carousel-item
+        margin-right: 0
+        flex: 0 0 25%
+        display: block

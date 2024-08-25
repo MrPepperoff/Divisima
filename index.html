@@ -8,8 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/all.min.css">
 	<link rel="stylesheet" type="text/css" href=" css/bootstrap-utilities.min.css">
+	<link rel="stylesheet" type="text/css" href=" css/carusel.css">
 	<link rel="stylesheet" type="text/css" href=" css/style.css">
-	<link rel="stylesheet" href=" css/carusel.css">
 	<link rel="stylesheet" type="text/css" href=" css/index.css">	
 	<title>Divisima | Главная</title>
 	<script src="js/product.js"></script>
@@ -192,12 +192,13 @@
 		</section>
 		<section class="latest-products container">
 			<h2 class="latest-products__title">latest products</h2>
-			<div id="carouselprod" class="carousel slide owl-carousel slide-one">
-					<div class="carousel-inner">
-						<div class="carousel-item col-4 w-25 active">
+				<div id="carouselLatest" class="latest__carousel carousel slide">
+					<div class="latest__carousel-wrap">
+						<div class="carousel-inner latest__carousel-inner">
+						<div class="latest__carousel-item carousel-item">
 							<div class="card">
 								<div class="card__img">
-									<img src=" images/product/1.jpg" alt="product">
+									<img src="images/product/1.jpg" alt="...">
 									<div class="card__btn">
 										<a href="product.html" class="card__cart">
 											<div class="card__cart-wrap">
@@ -206,8 +207,8 @@
 											</div>
 										</a>
 										<a href="#" class="card__like">
-											<!-- <i class="fa-regular fa-heart"></i> -->
-											<i class="fa-solid fa-heart"></i>
+											<i class="fa-regular fa-heart"></i>
+											<!-- <i class="fa-solid fa-heart"></i> -->
 										</a>
 									</div>
 								</div>
@@ -217,69 +218,132 @@
 								</div>
 							</div>
 						</div>
-						<div class="carousel-item col-4 w-25">
-							<div class="prod_item">
-								<div class="product_img">
-									<img src=" images/product/2.jpg" alt="product">
-									<a href="product.html" class="shop">
-										<i class="fa-solid fa-bag-shopping"></i>
-										<span>add to cart</span>
-									</a>
-									<a href="#" class="like">
-										<i class="fa-regular fa-heart"></i>
-									</a>
+						<div class="latest__carousel-item carousel-item">
+							<div class="card">
+								<div class="card__img">
+									<img src="images/product/2.jpg" alt="...">
+									<div class="card__btn">
+										<a href="product.html" class="card__cart">
+											<div class="card__cart-wrap">
+												<i class="fa-solid fa-bag-shopping"></i>
+												<span>add to cart</span>	
+											</div>
+										</a>
+										<a href="#" class="card__like">
+											<i class="fa-regular fa-heart"></i>
+											<!-- <i class="fa-solid fa-heart"></i> -->
+										</a>
+									</div>
 								</div>
-								<div class="text">
+								<div class="card__text">
 									<h4>Flamboyant Pink Top</h4>
-									<span>$35,00</span>
+									<p class="card__price">$35,00</p>
 								</div>
 							</div>
 						</div>
-						<!-- <div class="carousel-item col-4 w-25">
-							<div class="prod_item">
-								<div class="product_img">
-									<img src=" images/product/3.jpg" alt="product">
-									<a href="product.html" class="shop">
-										<i class="fa-solid fa-bag-shopping"></i>
-										<span>add to cart</span>
-									</a>
-									<a href="#" class="like">
-										<i class="fa-regular fa-heart"></i>
-									</a>
+						<div class="latest__carousel-item carousel-item">
+							<div class="card">
+								<div class="card__img">
+									<img src="images/product/3.jpg" alt="...">
+									<div class="card__btn">
+										<a href="product.html" class="card__cart">
+											<div class="card__cart-wrap">
+												<i class="fa-solid fa-bag-shopping"></i>
+												<span>add to cart</span>	
+											</div>
+										</a>
+										<a href="#" class="card__like">
+											<i class="fa-regular fa-heart"></i>
+											<!-- <i class="fa-solid fa-heart"></i> -->
+										</a>
+									</div>
 								</div>
-								<div class="text">
+								<div class="card__text">
 									<h4>Flamboyant Pink Top</h4>
-									<span>$35,00</span>
+									<p class="card__price">$35,00</p>
 								</div>
 							</div>
 						</div>
-						<div class="carousel-item col-4 w-25">
-							<div class="prod_item">
-								<div class="product_img">
-									<img src=" images/product/4.jpg" alt="product">
-									<a href="product.html" class="shop">
-										<i class="fa-solid fa-bag-shopping"></i>
-										<span>add to cart</span>
-									</a>
-									<a href="#" class="like">
-										<i class="fa-regular fa-heart"></i>
-									</a>
-								</div>
-								<div class="text">
-									<h4>Flamboyant Pink Top</h4>
-									<span>$35,00</span>
+							<div class="latest__carousel-item carousel-item">
+								<div class="card">
+									<div class="card__img">
+										<img src="images/product/4.jpg" alt="...">
+										<div class="card__btn">
+											<a href="product.html" class="card__cart">
+												<div class="card__cart-wrap">
+													<i class="fa-solid fa-bag-shopping"></i>
+													<span>add to cart</span>	
+												</div>
+											</a>
+											<a href="#" class="card__like">
+												<i class="fa-regular fa-heart"></i>
+												<!-- <i class="fa-solid fa-heart"></i> -->
+											</a>
+										</div>
+									</div>
+									<div class="card__text">
+										<h4>Flamboyant Pink Top</h4>
+										<p class="card__price">$35,00</p>
+									</div>
 								</div>
 							</div>
-						</div> -->
+							<div class="latest__carousel-item carousel-item">
+								<div class="card">
+									<div class="card__img">
+										<img src="images/product/5.jpg" alt="...">
+										<div class="card__btn">
+											<a href="product.html" class="card__cart">
+												<div class="card__cart-wrap">
+													<i class="fa-solid fa-bag-shopping"></i>
+													<span>add to cart</span>	
+												</div>
+											</a>
+											<a href="#" class="card__like">
+												<i class="fa-regular fa-heart"></i>
+												<!-- <i class="fa-solid fa-heart"></i> -->
+											</a>
+										</div>
+									</div>
+									<div class="card__text">
+										<h4>Flamboyant Pink Top</h4>
+										<p class="card__price">$35,00</p>
+									</div>
+								</div>
+							</div>
+							<div class="latest__carousel-item carousel-item">
+								<div class="card">
+									<div class="card__img">
+										<img src="images/product/5.jpg" alt="...">
+										<div class="card__btn">
+											<a href="product.html" class="card__cart">
+												<div class="card__cart-wrap">
+													<i class="fa-solid fa-bag-shopping"></i>
+													<span>add to cart</span>	
+												</div>
+											</a>
+											<a href="#" class="card__like">
+												<i class="fa-regular fa-heart"></i>
+												<!-- <i class="fa-solid fa-heart"></i> -->
+											</a>
+										</div>
+									</div>
+									<div class="card__text">
+										<h4>Flamboyant Pink Top</h4>
+										<p class="card__price">$35,00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="carousel-control-prev latest__control-prev" type="button" data-bs-slide="prev">
+							<i class="fa-solid fa-angle-left"></i>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next latest__control-next" type="button" data-bs-slide="next">
+							<i class="fa-solid fa-angle-right"></i>
+							<span class="visually-hidden">Next</span>
+						</button>	
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselprod" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselprod" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+					
 				</div>
 		</section>
 		<section class="browse_top">
@@ -562,7 +626,8 @@
 			
 		</div>
 	</footer>
-		<script src="js/card.js"></script>
-		<script src=" js/bootstrap.bundle.min.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/card.js"></script>
+	<script src=" js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
