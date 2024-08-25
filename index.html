@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href=" css/carusel.css">
 	<link rel="stylesheet" type="text/css" href=" css/index.css">	
 	<title>Divisima | Главная</title>
+	<script src="js/product.js"></script>
 </head>
 <body>
 	<header>
@@ -189,26 +190,30 @@
 				</li>
 			</ul>
 		</section>
-		<section class="latest_products adaptive">
-			<h2>latest products</h2>
-			<span>не работает нормально :(</span>
+		<section class="latest-products container">
+			<h2 class="latest-products__title">latest products</h2>
 			<div id="carouselprod" class="carousel slide owl-carousel slide-one">
 					<div class="carousel-inner">
 						<div class="carousel-item col-4 w-25 active">
-							<div class="prod_item">
-								<div class="product_img">
+							<div class="card">
+								<div class="card__img">
 									<img src=" images/product/1.jpg" alt="product">
-									<a href="product.html" class="shop">
-										<i class="fa-solid fa-bag-shopping"></i>
-										<span>add to cart</span>
-									</a>
-									<a href="#" class="like">
-										<i class="fa-regular fa-heart"></i>
-									</a>
+									<div class="card__btn">
+										<a href="product.html" class="card__cart">
+											<div class="card__cart-wrap">
+												<i class="fa-solid fa-bag-shopping"></i>
+												<span>add to cart</span>	
+											</div>
+										</a>
+										<a href="#" class="card__like">
+											<!-- <i class="fa-regular fa-heart"></i> -->
+											<i class="fa-solid fa-heart"></i>
+										</a>
+									</div>
 								</div>
-								<div class="text">
+								<div class="card__text">
 									<h4>Flamboyant Pink Top</h4>
-									<span>$35,00</span>
+									<p class="card__price">$35,00</p>
 								</div>
 							</div>
 						</div>
@@ -230,7 +235,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="carousel-item col-4 w-25">
+						<!-- <div class="carousel-item col-4 w-25">
 							<div class="prod_item">
 								<div class="product_img">
 									<img src=" images/product/3.jpg" alt="product">
@@ -265,7 +270,7 @@
 									<span>$35,00</span>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselprod" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -557,6 +562,7 @@
 			
 		</div>
 	</footer>
+		<script src="js/card.js"></script>
 		<script src=" js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
