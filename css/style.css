@@ -368,9 +368,24 @@ body::-webkit-scrollbar-thumb:hover {
   padding-left: 15px;
 }
 
+.title {
+  color: rgb(var(--d-gray));
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  padding: 60px 0px;
+  font-weight: bold;
+}
+
 .hero {
   position: relative;
   height: 720px;
+}
+.hero__carousel {
+  height: 100%;
+}
+.hero__carousel-inner {
+  height: 100%;
 }
 .hero .bg_1 {
   background: #000 url(../images/bg/bg.jpg) center no-repeat;
@@ -380,7 +395,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: #000 url(../images/bg/bg-2.jpg) center no-repeat;
   height: 100%;
 }
-
 .hero .offer {
   display: none;
   color: #fff;
@@ -648,9 +662,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: bold;
 }
 
-.feature {
-  background: #a00;
-}
 .feature__list {
   display: flex;
   width: 100%;
@@ -693,10 +704,6 @@ body::-webkit-scrollbar-thumb:hover {
     opacity: 1;
   }
 }
-.latest-products__title {
-  margin: 60px auto;
-}
-
 .card__img {
   width: 90%;
   margin: 0 auto;
@@ -883,9 +890,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .banner {
-  width: 100%;
   height: 243px;
-  margin: 60px 0;
+  margin: 60px auto;
   background: url("../images/banner-bg.jpg");
   position: relative;
   color: rgb(var(--d-gray));
@@ -897,6 +903,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   font-size: 4.8rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .banner__title-sup {
   font-size: 1.8rem;
@@ -918,6 +925,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-transform: uppercase;
 }
 .banner__button {
+  display: inline-block;
   text-decoration: none;
   background: rgb(var(--pink));
   color: rgb(var(--bg));

@@ -307,30 +307,40 @@ body
                 & p
                     padding-left: 15px 
 
-
+.title
+    color: rgb(var(--d-gray))
+    text-align: center
+    text-transform: uppercase
+    font-size: 3.6rem
+    padding: 60px 0px
+    font-weight: bold
 .hero
     position: relative
     height: 720px
+    &__carousel
+        height: 100%
+        &-inner
+            height: 100%
     & .bg_1
         background: #000 url(../images/bg/bg.jpg) center no-repeat
         height: 100%
     & .bg_2
         background: #000 url(../images/bg/bg-2.jpg) center no-repeat
         height: 100%
-.hero .offer
-    display: none
-    color: #fff
-    position: absolute
-    right: 30px
-    top: 30px
-    width: 162px
-    height: 162px
-    border-radius: 50%
-    background: #f51167
-    text-align: center
-    padding: 5px
-    box-sizing: border-box
-    animation: dollars 1s
+    & .offer
+        display: none
+        color: #fff
+        position: absolute
+        right: 30px
+        top: 30px
+        width: 162px
+        height: 162px
+        border-radius: 50%
+        background: #f51167
+        text-align: center
+        padding: 5px
+        box-sizing: border-box
+        animation: dollars 1s
 
 @keyframes dollars
     0%
@@ -550,13 +560,11 @@ body
         & span
             font-weight: bold
 .feature
-    background: #a00
-    
     &__list
         display: flex
         width: 100%
         & li
-            flex-grow: 1 
+            flex-grow: 1
             background: #f8f8f8
             font-size: 2.4rem
             text-transform: uppercase
@@ -586,10 +594,6 @@ body
         transform: rotate(0deg)
         opacity: 1
 
-.latest-products
-    // background: #ccc
-    &__title
-        margin: 60px auto
 .card
     &__img
         width: 90%
@@ -655,7 +659,6 @@ body
                 & span  
                     opacity: 1
                     transform: translateY(-1px)
-            
     &__item
         margin: 0 auto
         width: 90%
@@ -670,7 +673,6 @@ body
         font-size: 1.7rem
         font-weight: bold
         padding: 0 5px
-
 .latest
     &__carousel
         &-wrap
@@ -700,7 +702,6 @@ body
         right: -4vh
     &__control-prev
         left: -4vh
-
 @media (min-width: 768px) 
 .latest
     &__carousel-inner
@@ -711,12 +712,10 @@ body
         display: block
 
 .browse
-    // background: #0a0
     &__title
         padding: 70px 0
         font-size: 3.6rem
     &__buttons
-        // background: #a00
         display: flex
         justify-content: space-between
         margin: 26px 0
@@ -732,7 +731,6 @@ body
             background: rgba(var(--d-gray), .1)
     &__button-more
         text-align: center
-        
         & button
             border: 1px solid rgb(var(--d-gray))
             background: rgba(var(--d-gray), 0)
@@ -755,9 +753,8 @@ body
         width: 25%
 
 .banner
-    width: 100%
     height: 243px
-    margin: 60px 0
+    margin: 60px auto
     background: url('../images/banner-bg.jpg')
     position: relative
     color: rgb(var(--d-gray))
@@ -768,6 +765,7 @@ body
         width: 100%
         font-size: 4.8rem
         font-weight: bold
+        text-transform: uppercase
         &-sup
             font-size: 1.8rem
             text-transform: uppercase
@@ -786,6 +784,7 @@ body
         font-weight: bold
         text-transform: uppercase
     &__button
+        display: inline-block
         text-decoration: none
         background: rgb(var(--pink))
         color: rgb(var(--bg))
