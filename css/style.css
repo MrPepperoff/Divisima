@@ -37,6 +37,7 @@ body::-webkit-scrollbar-thumb:hover {
 .header__top-wrap {
   display: flex;
   height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -131,6 +132,11 @@ body::-webkit-scrollbar-thumb:hover {
   text-decoration: none;
   color: rgb(var(--bg));
 }
+@media (min-width: 1199px) {
+  .nav__burger {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .nav__burger {
     display: none;
@@ -176,6 +182,26 @@ body::-webkit-scrollbar-thumb:hover {
 .container {
   margin: 0 auto;
 }
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1199px) {
+  .container {
+    width: 1175px;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     width: 1199px;
@@ -199,14 +225,29 @@ body::-webkit-scrollbar-thumb:hover {
 .footer__menu {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   padding: 0 11px;
   box-sizing: border-box;
 }
 .footer__menu > div {
-  width: 25%;
   box-sizing: border-box;
   padding: 11px 16px;
   margin-bottom: 70px;
+}
+@media (min-width: 768px) {
+  .footer__menu > div {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .footer__menu > div {
+    width: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .footer__menu > div {
+    width: 25%;
+  }
 }
 .footer__menu > div h3 {
   font-size: 1.8rem;
@@ -241,6 +282,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .footer__social li span {
   margin: 10px 0 5px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .footer__social li span {
+    display: inline-block;
+  }
 }
 .footer__social li a {
   display: flex;
@@ -823,30 +870,49 @@ body::-webkit-scrollbar-thumb:hover {
 .latest__control-prev:focus, .latest__control-next:focus {
   color: rgb(var(--d-gray));
 }
+@media (min-width: 1199px) {
+  .latest__control-prev, .latest__control-next {
+    height: 100%;
+    border-radius: 0;
+    border: 0px;
+  }
+}
 .latest__control-next {
   right: -4vh;
+}
+@media (min-width: 1199px) {
+  .latest__control-next {
+    right: 0vh;
+  }
 }
 .latest__control-prev {
   left: -4vh;
 }
-
-.latest__carousel-inner {
-  display: flex;
-}
-.latest__carousel-item {
-  margin-right: 0;
-  flex: 0 0 25%;
-  display: block;
+@media (min-width: 1199px) {
+  .latest__control-prev {
+    left: 0vh;
+  }
 }
 
+@media (min-width: 768px) {
+  .latest__carousel-inner {
+    display: flex;
+  }
+  .latest__carousel-item {
+    margin-right: 0;
+    flex: 0 0 25%;
+    display: block;
+  }
+}
 .browse__title {
   padding: 70px 0;
   font-size: 3.6rem;
 }
 .browse__buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 26px 0;
+  flex-wrap: wrap;
 }
 .browse__buttons a {
   display: block;
@@ -885,8 +951,25 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   flex-wrap: wrap;
 }
-.products__card {
-  width: 25%;
+@media (min-width: 576px) {
+  .products__card {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .products__card {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .products__card {
+    width: 33.33%;
+  }
+}
+@media (min-width: 1199px) {
+  .products__card {
+    width: 25%;
+  }
 }
 
 .banner {
@@ -896,33 +979,35 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
   color: rgb(var(--d-gray));
   box-sizing: border-box;
-  padding: 20px;
+  padding: 50px 34px 47px;
 }
 .banner__title {
-  text-align: left;
-  width: 100%;
   font-size: 4.8rem;
-  font-weight: bold;
   text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
 .banner__title-sup {
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+  display: block;
 }
 .banner__promo {
   position: absolute;
-  right: 1vw;
-  top: 1vw;
-  background: #50e505;
+  right: 26px;
+  top: 27px;
+  font-size: 24px;
+  font-weight: 700;
   color: #fff;
-  font-size: 2rem;
-  padding: 7px 10px 5px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  line-height: 20px;
-  font-weight: bold;
+  background: #50e550;
+  line-height: 1;
   text-transform: uppercase;
+  padding: 7px 16px 1px;
+  border-radius: 80px;
 }
 .banner__button {
   display: inline-block;

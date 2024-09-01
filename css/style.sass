@@ -31,6 +31,7 @@ body
         &-wrap
             display: flex
             height: 100%
+            width: 100%
             align-items: center
             justify-content: space-between
             & i
@@ -105,8 +106,11 @@ body
         text-decoration: none
         color: rgb(var(--bg))
     &__burger
+        @include xl
+            display: none
         @include xxl
             display: none
+
     &__menu
         height: 100%
         display: flex
@@ -141,9 +145,17 @@ body
             display: none
 .container
     margin: 0 auto
-
+    @include sm
+        width: 540px
+    @include md
+        width: 720px
+    @include lg
+        width: 960px
+    @include xl
+        width: 1175px
     @include xxl
         width: 1199px
+ 
 .footer
     background: rgb(var(--d-gray))
     color: rgb(var(--bg))
@@ -158,13 +170,19 @@ body
     &__menu
         display: flex
         flex-grow: 1
+        flex-wrap: wrap
         padding: 0 11px
         box-sizing: border-box
         & > div
-            width: 25%
             box-sizing: border-box
             padding: 11px 16px
             margin-bottom: 70px
+            @include md
+                width: 100%
+            @include lg
+                width: 50%
+            @include xl
+                width: 25%
             & h3
                 font-size: 1.8rem
                 font-weight: bold
@@ -194,6 +212,9 @@ body
                 transition: 0.2s ease
             & span
                 margin: 10px 0 5px
+                display: none
+                @include lg
+                    display: inline-block
             & a
                 display: flex
                 align-items: center
@@ -698,18 +719,26 @@ body
             background: rgba(var(--d-gray), .08)
         &:focus
             color: rgb(var(--d-gray))
+        @include xl
+            height: 100%
+            border-radius: 0
+            border: 0px
     &__control-next
         right: -4vh
+        @include xl
+            right: 0vh
     &__control-prev
         left: -4vh
+        @include xl
+            left: 0vh
 @media (min-width: 768px) 
-.latest
-    &__carousel-inner
-        display: flex
-    &__carousel-item
-        margin-right: 0
-        flex: 0 0 25%
-        display: block
+    .latest
+        &__carousel-inner
+            display: flex
+        &__carousel-item
+            margin-right: 0
+            flex: 0 0 25%
+            display: block
 
 .browse
     &__title
@@ -717,8 +746,9 @@ body
         font-size: 3.6rem
     &__buttons
         display: flex
-        justify-content: space-between
+        justify-content: center
         margin: 26px 0
+        flex-wrap: wrap
         & a
             display: block
             text-decoration: none
@@ -750,7 +780,14 @@ body
     display: flex
     flex-wrap: wrap
     &__card
-        width: 25%
+        @include sm
+            width: 100%
+        @include md
+            width: 50%
+        @include lg
+            width: 33.33%
+        @include xl
+            width: 25%
 
 .banner
     height: 243px
@@ -759,30 +796,32 @@ body
     position: relative
     color: rgb(var(--d-gray))
     box-sizing: border-box
-    padding: 20px
+    padding: 50px 34px 47px
     &__title
-        text-align: left
-        width: 100%
         font-size: 4.8rem
-        font-weight: bold
         text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 10px
+        line-height: 1.2
         &-sup
             font-size: 1.8rem
             text-transform: uppercase
             font-weight: bold
+            letter-spacing: 3px
+            margin-bottom: 5px
+            display: block
     &__promo
         position: absolute
-        right: 1vw
-        top: 1vw
-        background: #50e505
+        right: 26px
+        top: 27px
+        font-size: 24px
+        font-weight: 700
         color: #fff
-        font-size: 2rem
-        padding: 7px 10px 5px
-        border-radius: 20px
-        box-sizing: border-box
-        line-height: 20px
-        font-weight: bold
+        background: #50e550
+        line-height: 1
         text-transform: uppercase
+        padding: 7px 16px 1px
+        border-radius: 80px
     &__button
         display: inline-block
         text-decoration: none
