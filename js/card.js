@@ -4,7 +4,6 @@ productsList;
 // console.log(productsList)
 products.innerHTML='';
 productsList.forEach(product => {
-    console.log(product.image)
     products.innerHTML += `
     <div class="products__card card">
         <div class="card__img">

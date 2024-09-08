@@ -29,7 +29,7 @@ let productsList = [
         'image': 'product/4.jpg',
         'price': null,
         'promo': null,
-        'carousel': false
+        'carousel': true
     },
     {
         'id':5,
@@ -37,7 +37,7 @@ let productsList = [
         'image': 'product/5.jpg',
         'price': null,
         'promo': null,
-        'carousel': false
+        'carousel': true
     },
     {
         'id':6,
@@ -53,7 +53,7 @@ let productsList = [
         'image': 'product/7.jpg',
         'price': null,
         'promo': null,
-        'carousel': false
+        'carousel': true
     },
     {
         'id':8,
@@ -69,7 +69,7 @@ let productsList = [
         'image': 'product/9.jpg',
         'price': null,
         'promo': null,
-        'carousel': false
+        'carousel': true
     },
     {
         'id':10,
@@ -93,7 +93,7 @@ let productsList = [
         'image': 'product/12.jpg',
         'price': null,
         'promo': null,
-        'carousel': false
+        'carousel': true
     }
 ]
 

@@ -10,7 +10,6 @@
 	<link rel="stylesheet" type="text/css" href=" css/bootstrap-utilities.min.css">
 	<link rel="stylesheet" type="text/css" href=" css/carusel.css">
 	<link rel="stylesheet" type="text/css" href=" css/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href=" css/index.css">	 -->
 	<title>Divisima | Главная</title>
 </head>
 <body>
@@ -51,15 +50,13 @@
 		<div class="header__bottom">
 			<nav class="nav container">
 				<div class="nav__wrap">
-					<a href="#" class="nav__burger">
-						<span>MENU <i class="fa-solid fa-bars"></i></span>
-					</a>
+					<button type="button" class="nav__burger" id="burger">MENU <i class="fa-solid fa-bars"></i></button>
 					<ul class="nav__menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">Women</a></li>
-						<li><a href="#">Men</a></li>
-						<li><a href="#">Jewelry</a><span class="promo">new</span></li>
-						<li><span>Shoes<i class="fa-solid fa-angle-right"></i></span>
+						<li><a class="nav__link" href="index.html">Home</a></li>
+						<li><a class="nav__link" href="#">Women</a></li>
+						<li><a class="nav__link" href="#">Men</a></li>
+						<li><a class="nav__link" href="#">Jewelry</a><span class="promo">new</span></li>
+						<li class="menu-item"><span class="nav__link">Shoes<i class="fa-solid fa-angle-right"></i></span>
 							<ul class="nav__menu-sub">
 								<li><a href="#">Sneakers</a></li>
 								<li><a href="#">Sandals</a></li>
@@ -68,7 +65,7 @@
 								<li><a href="#">Flip Flops</a></li>
 							</ul>
 						</li>
-						<li><span>Pages<i class="fa-solid fa-angle-right"></i></span>
+						<li class="menu-item"><span class="nav__link">Pages<i class="fa-solid fa-angle-right"></i></span>
 							<ul class="nav__menu-sub">
 								<li><a href="#">Product Page</a></li>
 								<li><a href="#">Category Page</a></li>
@@ -77,103 +74,75 @@
 								<li><a href="#">Contact Page</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Blog</a></li>
+						<li><a class="nav__link" href="#">Blog</a></li>
 					</ul>
 				</div>
-				<!-- <div class="nav2">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">Women</a></li>
-						<li><a href="#">Men</a></li>
-						<li><a href="#">Jewelry <span class="new">New</span></a></li>
-						<li><span>Shoes</span>
-							<ul>
-								<li><a href="#">Sneakers</a></li>
-								<li><a href="#">Sandals</a></li>
-								<li><a href="#">Formal Shoes</a></li>
-								<li><a href="#">Boots</a></li>
-								<li><a href="#">Flip Flops</a></li>
-							</ul>
-						</li>
-						<li><span>Pages</span>
-							<ul>
-								<li><a href="#">Product Page</a></li>
-								<li><a href="#">Category Page</a></li>
-								<li><a href="#">Cart Page</a></li>
-								<li><a href="#">Checkout Page</a></li>
-								<li><a href="#">Contact Page</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Blog</a></li>
-					</ul>
-				</div> -->
 			</nav>	
 		</div>
 	</header>
 	<main>
 		<section class="hero">
-			<!-- <div class="hero__wrap"> -->
-				<div id="carouselHero" class="carousel slide carousel-fade hero__carousel" data-bs-ride="carousel">
-					<div class="carousel-inner hero__carousel-inner">
-						<div class="carousel-indicators carousel__indicators">
-							<div class="container carousel__indicators-wrap">
-								<div class="carousel__button">
-									<button type="button" data-bs-target="#carouselHero" class="carousel-control-prev carousel__control" data-bs-slide="prev">
-										<i class="fa-solid fa-angle-left"></i>
-										<span class="visually-hidden">Previous</span>
-									</button>
-									<button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active carousel__indicator" aria-current="true" aria-label="Slide 1"></button>
-									<button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" class="carousel__indicator" aria-label="Slide 2"></button>
-									<button type="button" data-bs-target="#carouselHero" class="carousel-control-next carousel__control" data-bs-slide="next">
-										<i class="fa-solid fa-angle-right"></i>
-										<span class="visually-hidden">Next</span>
-									</button>	
-								</div>
-								<div class="carousel__number">
-									<span>1</span> / <span>2</span>
-								</div>	
+			<div id="carouselHero" class="carousel slide carousel-fade hero__carousel" data-bs-ride="carousel">
+				<div class="carousel-inner hero__carousel-inner">
+					<div class="carousel-indicators carousel__indicators">
+						<div class="container carousel__indicators-wrap">
+							<div class="carousel__button">
+								<button type="button" data-bs-target="#carouselHero" class="carousel-control-prev carousel__control" data-bs-slide="prev">
+									<i class="fa-solid fa-angle-left"></i>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active carousel__indicator" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" class="carousel__indicator" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselHero" class="carousel-control-next carousel__control" data-bs-slide="next">
+									<i class="fa-solid fa-angle-right"></i>
+									<span class="visually-hidden">Next</span>
+								</button>	
 							</div>
-							
+							<div class="carousel__number">
+								<span>1</span> / <span>2</span>
+							</div>	
 						</div>
-						<div class="carousel__item carousel-item bg_1 active">
-							<div class="carousel-caption carousel__context">
-								<div class="carousel__text">
-									<span>new arrivals</span>
-									<h2>denim jackets</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-									<a href="#" class="carousel__link-novisible">discover</a>
-									<a href="#" class="carousel__link">add to cart</a>
-								</div>
-								<div class="carousel__offer">
-									<div class="carousel__offer-radius">
-										<span>from</span>
-										<h2>$29</h2>
-										<p>shop now</p>
-									</div>
-								</div>	
+						
+					</div>
+					<div class="carousel__item carousel-item bg_1 active">
+						<div class="carousel-caption carousel__context">
+							<div class="carousel__text">
+								<span>new arrivals</span>
+								<h2>denim jackets</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+								<a href="#" class="carousel__link-novisible">discover</a>
+								<a href="#" class="carousel__link">add to cart</a>
 							</div>
-							
+							<div class="carousel__offer">
+								<div class="carousel__offer-radius">
+									<span>from</span>
+									<h2>$29</h2>
+									<p>shop now</p>
+								</div>
+							</div>	
 						</div>
-						<div class="carousel__item carousel-item bg_2">
-							<div class="carousel-caption carousel__context">
-								<div class="carousel__text">
-									<span>new arrival</span>
-									<h2>denim jackets</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-									<a href="#" class="carousel__link-novisible">discover</a>
-									<a href="#" class="carousel__link">add to cart</a>
-								</div>
-								<div class="carousel__offer">
-									<div class="carousel__offer-radius">
-										<span>from</span>
-										<h2>$29</h2>
-										<p>shop now</p>
-									</div>
-								</div>	
+						
+					</div>
+					<div class="carousel__item carousel-item bg_2">
+						<div class="carousel-caption carousel__context">
+							<div class="carousel__text">
+								<span>new arrival</span>
+								<h2>denim jackets</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+								<a href="#" class="carousel__link-novisible">discover</a>
+								<a href="#" class="carousel__link">add to cart</a>
 							</div>
+							<div class="carousel__offer">
+								<div class="carousel__offer-radius">
+									<span>from</span>
+									<h2>$29</h2>
+									<p>shop now</p>
+								</div>
+							</div>	
 						</div>
 					</div>
 				</div>
+			</div>
 		</section>
 		<section class="feature">
 			<ul class="feature__list">
@@ -487,6 +456,7 @@
 			
 		</div>
 	</footer>
+	<script src="js/script.js"></script>
 	<script src="js/product.js"></script>
 	<script src="js/carousel.js"></script>
 	<script src="js/card.js"></script>
