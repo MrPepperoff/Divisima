@@ -136,30 +136,39 @@ body
         font-family: var(--josefin-sans)
         @include xxs
             display: inline-block
-        @include md
-            display: none
-        &:active
-            color: rgba(var(--bg), .5)
+            &:active
+                color: rgba(var(--bg), .5)
             
-        &:hover
-            text-shadow: 0 0 1px rgb(var(--gray)), 0 0 2px rgb(var(--bg))
-        & + .nav__menu
-            width: 0px
-            height: 0px
-            transition: 0.1s ease
-        &_active
-            text-shadow: 0 0 1px rgb(var(--gray)), 0 0 2px rgb(var(--bg))
-            & + .nav
-                &__menu
-                    visibility: visible
-                    display: block
-                    width: auto 
+            &:hover
+                text-shadow: 0 0 1px rgb(var(--gray)), 0 0 2px rgb(var(--bg))
+            & + .nav__menu
+                width: 100%
+                @include xxs
+                    transform: rotate3d(1, 0, 0, 90deg)
+                    transform-origin: center top
+                    height: 0px
+                @include lg
+                    transform: rotate3d(1, 0, 0, 0deg)
                     height: auto
-                    position: relative
-                    text-align: left
-                    & li.menu-item
-                        background: #330
+                & > li
+                    @include xxs
+                        background: rgb(var(--gray))
+                    @include lg
+                        background: transparent
+                        padding: 0 5px
+                        &.menu-item
+                            & span
+                                & i
+                                    display: none
+                            &:hover ul
+                                height: auto
+                            & ul
+                                background: rgb(var(--bg))
+                                color: rgb(var(--d-gray))
+                                width: 200px
+                    &.menu-item
                         height: auto
+
                         & span
                             &.nav__link
                                 position: relative
@@ -170,37 +179,61 @@ body
                                     left: 0
                                     transition: 0.2s ease
                             & + ul
+                                transition: 1s ease
+                                margin: 0 1%
                                 height: 0
-                                opacity: 0
+                                width: 98%
+                                padding: 0 5px
+                                box-sizing: border-box
+                                overflow: hidden
+                                border-radius: 6px
+                                background: rgba(var(--d-gray), .4)
+                                box-shadow: inset 1px 1px 2px #272727, inset -1px -1px 2px #9b9b9b
+                                & li
+                                    & a
+                                        display: block
+                                        color: rgb(var(--bg))
+                                        padding: 20px 0
+                                        &:hover
+                                            color: rgb(var(--pink))
                         &_active
+                            transition: 0.5s ease
                             & span
+                                @include xxs
+                                    color: rgb(var(--pink))
+                                @include lg
+                                    color: inherit
+                                    &:hover
+                                        color: rgb(var(--pink))
                                 &.nav__link
                                     & i
                                         left: 10px
                                         transform: rotate(90deg)
-                                & + ul
-                                    visibility: visible      
-                                    width: auto
-                                    height: auto
-                                    opacity: 1
-                                    position: relative
-    &__menu
-        display: flex
-        align-items: center
-        font-family: var(--josefin-sans)
-
-        @include xxs
-            visibility: hidden
-            position: absolute
+                                & + ul   
+                                    height: calc(5*56px)
+            &_active
+                text-shadow: 0 0 1px rgb(var(--gray)), 0 0 2px rgb(var(--bg))
+                & + .nav
+                    &__menu  
+                        transform: rotate3d(1, 0, 0, 0deg)
+                        height: auto
         @include md
-            visibility: visible
+            display: none
+    &__menu
+        font-family: var(--josefin-sans)
+        @include xxs
+            display: block
+            position: absolute
+            text-align: left
+            transition: 1s ease
+            z-index: 100
+        @include md
+            display: flex
+            align-items: center
             position: relative
         & li
             position: relative
-            height: 100%
             font-size: 1.6rem
-            margin: 0 2%
-
             & .nav__link 
                 user-select: none
                 text-decoration: none
@@ -395,7 +428,6 @@ body
             width: 50%
             & li
                 padding-left: 20px
-                // list-style: disc
                 height: 3rem
                 position: relative
                 transition: 1s ease
@@ -498,7 +530,7 @@ body
         width: 162px
         height: 162px
         border-radius: 50%
-        background: #f51167
+        background: rgb(var(--pink))
         text-align: center
         padding: 5px
         box-sizing: border-box
@@ -994,6 +1026,3 @@ body
         font-size: 1.4rem
         text-transform: uppercase
         font-weight: 600
-// *
-//     border: 1px solid #a00 !important
-//     box-sizing: border-box
