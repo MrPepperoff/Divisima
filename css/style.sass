@@ -817,35 +817,51 @@ body
             overflow: visible
     &__control-prev, 
     &__control-next
-        color: rgb(var(--d-gray))
-        width: 4vh
-        height: 4vh
-        border-radius: 50%
-        border: 2px solid rgb(var(--d-gray))
-        top: 50%
-        transform: translateY(-50%)
-        opacity: 0.6
-        transition: 0.2s ease
-        &:hover
-            color: rgb(var(--d-gray))
-            opacity: 1
-            background: rgba(var(--d-gray), .08)
-        &:focus
-            color: rgb(var(--d-gray))
-        @include xl
+        @include xxs
             height: 100%
             border-radius: 0
             border: 0px
+        @include md
+            box-shadow: 0 0 5px rgb(var(--bg)), 0 0 5px rgb(var(--bg))
+            text-shadow: 0 0 5px rgb(var(--bg)), 0 0 5px rgb(var(--bg))
+            color: rgb(var(--d-gray))
+            width: 4vh
+            height: 4vh
+            border-radius: 50%
+            border: 2px solid rgb(var(--d-gray))
+            top: 50%
+            transform: translateY(-50%)
+            opacity: 0.6
+            transition: 0.2s ease
+            &:hover
+                color: rgb(var(--d-gray))
+                opacity: 1
+                background: rgba(var(--d-gray), .08)
+            &:focus
+                color: rgb(var(--d-gray))
+        
     &__control-next
         @include xxs
             right: 0vh
+        @media (max-width: 1260px)
+            // background: #a00
+            right: 0vh !important
         @include xl
             right: -4vh
     &__control-prev
         @include xxs
             left: 0vh
+        @media (max-width: 1260px)
+            // background: #a00
+            left: 0vh !important
         @include xl
             left: -4vh
+
+    &-products
+        @include xxs
+            display: none
+        @include md
+            display: block
     @include md
         &__carousel-inner
             display: flex
