@@ -44,13 +44,16 @@ body
     &__logo 
         padding: 0 20px
     &__search
-        flex-grow: 4
+        @include xxs
+            flex-grow: 0
+        @include md
+            flex-grow: 4
         &-wrap
             position: relative
             & input 
                 width: 100%
                 height: 44px
-                border-radius: 20px
+                border-radius: 30px
                 border: none
                 background: #f0f0f0
                 padding-left: 10px
@@ -78,7 +81,6 @@ body
                 margin: 0 20px
     &__user-panel
         display: flex
-        width: 100%
         font-size: 1.4rem
         align-items: center
         justify-content: space-evenly
@@ -87,7 +89,14 @@ body
         font-family: var(--josefin-sans)
         @include xxs
             margin: 20px 60px
-
+            width: 100%
+        @include md
+            margin: 20px 0px
+            width: 100%
+        @include lg
+            margin: 20px 0px
+            width: auto
+        
         & a
             font-family: var(--josefin-sans)
             color: rgb(var(--text))
@@ -123,6 +132,7 @@ body
     &__wrap
         height: 100%
         text-align: right
+        position: relative
     &__burger
         cursor: pointer
         user-select: none
@@ -147,13 +157,13 @@ body
                     transform: rotate3d(1, 0, 0, 90deg)
                     transform-origin: center top
                     height: 0px
-                @include lg
+                @include md
                     transform: rotate3d(1, 0, 0, 0deg)
                     height: auto
                 & > li
                     @include xxs
                         background: rgb(var(--gray))
-                    @include lg
+                    @include md
                         background: transparent
                         padding: 0 5px
                         &.menu-item
@@ -179,7 +189,7 @@ body
                                     left: 0
                                     transition: 0.2s ease
                             & + ul
-                                transition: 1s ease
+                                transition: 0.4s ease
                                 margin: 0 1%
                                 height: 0
                                 width: 98%
@@ -196,6 +206,17 @@ body
                                         padding: 20px 0
                                         &:hover
                                             color: rgb(var(--pink))
+                                @include md
+                                    background: rgb(var(--bg))
+                                    width: 220px
+                                    padding: 0px 20px
+                                    & li
+                                        & a
+                                            color: rgb(var(--text))
+                                            padding: 20px 0
+                                            &:hover
+                                                color: rgb(var(--pink)) 
+                                
                         &_active
                             transition: 0.5s ease
                             & span
@@ -253,7 +274,7 @@ body
                     opacity: 1
                     transform: translateY(0px)
             & ul
-                @include lg
+                @include md
                     transform: translateY(50px)
                     position: absolute
                     background: rgb(var(--bg))
@@ -264,16 +285,16 @@ body
                     transition: 0.3s ease
                     width: 220px
                     padding: 20px 0
-                & li
-                    & a
-                        display: inline-block
-                        text-decoration: none
-                        padding: 8px 20px
-                        color: rgb(var(--text))
-                        transition: 0.1s ease
-                        font-size: 1.6rem
-                        &:hover
-                            color: rgb(var(--pink))
+                    & li
+                        & a
+                            display: inline-block
+                            text-decoration: none
+                            padding: 8px 20px
+                            color: rgb(var(--text))
+                            transition: 0.1s ease
+                            font-size: 1.6rem
+                            &:hover
+                                color: rgb(var(--pink))
             & .promo
                 position: absolute
                 top: -1rem
@@ -291,7 +312,7 @@ body
                 right: 0
                 @include xxs
                     display: none
-                @include lg
+                @include md
                     display: inline-block
         &-sub
             // display: none
@@ -536,91 +557,6 @@ body
         box-sizing: border-box
         animation: dollars 1s
 
-@keyframes dollars
-    0%
-        opacity: 0
-        transform: rotate(90deg)
-	
-    50%
-        opacity: 0
-        transform: rotate(45deg)
-	
-    100%
-        opacity: 1
-        transform: rotate(0deg)
-	
-
-.hero .offer_radius
-    border: 1px solid rgba(255, 255, 255, .3)
-    border-radius: 50%
-    width: 100%
-    height: 100%
-    padding-top: 10px
-    box-sizing: border-box
-
-.hero .offer p
-    font-size: 7rem
-    line-height: 8rem
-    margin: 0
-
-.hero .offer span
-    display: block
-    margin: 6px
-
-.hero .offer span:first-child
-    font-weight: bold
-    font-size: 2rem
-    line-height: 2rem
-
-.hero .offer span:last-child
-    font-weight: 100
-    text-transform: uppercase
-    font-size: 1.5rem
-    line-height: 1.5rem
-
-.hero .text1
-    display: grid
-    grid-template-columns: minmax(0px,670px)
-    margin: 200px 0 0
-    padding: 0 10%
-
-.hero .text1 div
-    width: 100%
-    color: #fff
-    text-transform: uppercase
-
-.hero .text1 span
-    font-size: 2rem
-    font-weight: bold
-    letter-spacing: 3px
-
-.hero .text1 h2
-    margin: 10px 0 15px
-    font-size: 5rem
-    font-weight: bold
-
-.hero .text1 p
-    line-height: 2.5rem
-    text-transform: none
-    font-size: 1.8rem
-    font-weight: 300
-
-.hero .text1 a
-    display: inline-block
-    margin-top: 30px
-    color: #fff
-    text-decoration: none
-    padding: 15px 45px
-    border: 1px solid #fff
-    border-radius: 35px
-    font-weight: bold
-    font-size: 1.5rem
-
-.hero .text1 a:last-child
-    background: #fff
-    color: #000
-
-
 .carousel
     &__item
         position: relative 
@@ -791,21 +727,6 @@ body
         @include lg
             flex-direction: row
 
-@keyframes textCarusel 
-    0%
-        transform: translateY(120px)
-        opacity: 0
-    100%
-        transform: translate(0px)
-        opacity: 1
-
-@keyframes offer
-    0%
-        transform: rotate(30deg)
-        opacity: 0
-    100%
-        transform: rotate(0deg)
-        opacity: 1
 
 .card
     &__img
@@ -925,8 +846,7 @@ body
             left: 0vh
         @include xl
             left: -4vh
-@media (min-width: 768px) 
-    .latest
+    @include md
         &__carousel-inner
             display: flex
         &__carousel-item
@@ -951,6 +871,7 @@ body
             padding: 10px 34px
             border-radius: 30px
             font-size: 1.2rem
+            margin: 10px
             color: rgb(var(--d-gray))
             background: rgba(var(--d-gray), .1)
     &__button-more
@@ -1026,3 +947,36 @@ body
         font-size: 1.4rem
         text-transform: uppercase
         font-weight: 600
+
+
+
+
+
+@keyframes dollars
+    0%
+        opacity: 0
+        transform: rotate(90deg)
+	
+    50%
+        opacity: 0
+        transform: rotate(45deg)
+	
+    100%
+        opacity: 1
+        transform: rotate(0deg)
+
+@keyframes textCarusel 
+    0%
+        transform: translateY(120px)
+        opacity: 0
+    100%
+        transform: translate(0px)
+        opacity: 1
+
+@keyframes offer
+    0%
+        transform: rotate(30deg)
+        opacity: 0
+    100%
+        transform: rotate(0deg)
+        opacity: 1
